@@ -19,3 +19,19 @@ ls | grep ".md"        # Filter command output
 
 touch file.txt         # Create empty file
 touch index.html style.css # Create multiple files
+
+git status                    # Show working tree status
+git ls-files                 # List tracked files
+git ls-files -m              # List modified tracked files
+git ls-files --others        # List untracked files
+
+git branch                   # List local branches
+git branch -r                # List remote branches
+git checkout branch-name     # Switch branch
+git checkout -b new-branch   # Create & switch branch
+
+git log --oneline --graph --all  # Commit history graph
+git shortlog -sn             # Commits per author
+git diff --stat              # File change statistics
+git count-objects -vH        # Repository size info
+git rev-list --count HEAD    # Total commits on branch
