@@ -1,6 +1,16 @@
-def main():
-    print("Hello from lektion-9-docker-basics!")
+from fastapi import FastAPI
+from starlette import status
+
+from app.schema.Product import ProductSchema
+
+app = FastAPI(title="Lektion_9")
+
+@app.get("/")
+def root():
+    return {"message": "Hello World"}
 
 
-if __name__ == "__main__":
-    main()
+@app.post("/products", status_code=status.HTTP_201_CREATED, response_model=ProductSchema)
+def post_product(product: ProductSchema) -> ProductSchema:
+
+    return product

@@ -1,0 +1,5 @@
+# FROM      - Image (Snapshot)
+# WORKDIR   - Working Directory (*/app*)
+# COPY      - Extract a duplicate copy of our app (app snapshot)
+# EXPOSE    - Includes a port that OS listens to
+# CMD       - Commands to be run, on startup
